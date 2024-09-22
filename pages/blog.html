@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <style>
+        #allposts {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .post {
+            border: 1px solid var(--background-color);
+            margin-bottom: 20px;
+            padding: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+        }
+
+        .post:hover {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .post img {
+            max-width: 48%;
+            border-radius: 5px;
+            margin: 1%;
+        }
+
+        .post .text {
+            width: 48%;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <main>
+        <div style="display: flex; justify-content: space-between;">
+            <h2>Blog</h2>
+            <ul id="pagination" style="list-style-type: none"></ul>
+        </div>
+        <div id="allposts"></div>
+    </main>
+    
+    <div id="footer"></div>
+    <script src="../src/blog.js" defer></script>
+    <script src="../src/main.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/projects.css">
+</head>
+<body>
+    <div id="header"></div>
+    
+    <main>
+            <h2>Projetos</h2>
+            <p>Alguns projetos finalizados</p>
+
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+                <div id="pcontainer"></div>
+                <button 
+                    style="background: none; border: none; padding: 0; cursor: pointer;"
+                    onclick="showOtherCards()"
+                    title="veja outros projetos">
+                    <img id="showMoreCardsArrow" src="../assets/seta.png" alt="veja mais" width="29px"/>
+                </button>
+                <div id="hidden-pcontainer"></div>
+            </div>
+    </main>
+    
+    <div id="footer"></div>
+    <script src="../src/main.js" defer></script>
+    <script src="../src/projects.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <h2>Entre em Contato</h2>
+        <form id="contact-form" action="#" method="post">
+            
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" required minlength="3">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" name="tel" placeholder="(99) 99999-9999" pattern="\(?\d{2}\)?\s?\d{5}(\s|-)?\d{4}" required>
+
+            <div style="display: flex; gap: 15px">
+                <p>Como prefere ser contatado?</p>
+                <label><input type="radio" name="contact_preference" value="email" required>Email</label>
+                <label><input type="radio" name="contact_preference" value="telefone" required>Telefone</label>
+            </div>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            
+            <div class="buttons">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        background-color: var(--seccccccc);
+        width: 100%;
+        padding: 17px 40px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    #h-ul-pages {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+    }
+    #h-ul-pages li {
+        list-style: none;
+    }
+    #h-ul-pages li a {
+        text-decoration: none;
+        color: var(--card-background-color); 
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    }
+    #h-ul-pages li:hover a {
+        color: var(--accent-color);
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+</style>
+
+<header>
+    <ul id="h-ul-pages">
+        <li id="h-li-index"><a href="/index.html">Home</a></li>
+        <li id="h-li-projects"><a href="/pages/projects.html">Projetos</a></li>
+        <li id="h-li-contact"><a href="/pages/contact.html">Contato</a></li>
+        <li id="h-li-blog"><a href="/pages/blog.html">Blog</a></li>
+        <li id="h-li-services"><a href="/pages/services.html">Serviços</a></li>
+        <li id="h-li-about"><a href="/pages/about.html">Sobre</a></li>
+    </ul>
+</header>
+
