@@ -1,9 +1,4 @@
 <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
     header {
         background-color: var(--seccccccc);
         width: 100%;
@@ -13,40 +8,75 @@
         align-items: center;
         justify-content: start;
     }
-    #h-ul-pages {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        gap: 30px;
-        list-style: none;
-    }
-    #h-ul-pages li {
-        list-style: none;
-    }
-    #h-ul-pages li a {
+
+    #dropdown-content li a {
         text-decoration: none;
-        color: var(--card-background-color); 
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
         padding: 10px 15px;
-        border-radius: 8px;
-        transition: background-color 0.3s, transform 0.3s, color 0.3s;
+        border-radius: 6px;
     }
-    #h-ul-pages li:hover a {
+
+    #dropdown-content li:hover a {
         color: var(--accent-color);
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        border-radius: 6px;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content li {
+        list-style: none;
+    }
+
+    .dropdown-content li a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content li a:active,
+    .dropdown-content li a:hover {
+        background-color: #f1f1f1;
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .dropbtn {
+        background-color: transparent;;
+        font-size: 16px;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        border: none;
+
+        img {pointer-events: none;}
     }
 </style>
 
 <header>
-    <ul id="h-ul-pages">
-        <li id="h-li-index"><a href="/index.html">Home</a></li>
-        <li id="h-li-projects"><a href="/pages/projects.html">Projetos</a></li>
-        <li id="h-li-contact"><a href="/pages/contact.html">Contato</a></li>
-        <li id="h-li-blog"><a href="/pages/blog.html">Blog</a></li>
-        <li id="h-li-services"><a href="/pages/services.html">Serviços</a></li>
-        <li id="h-li-about"><a href="/pages/about.html">Sobre</a></li>
-    </ul>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">
+            <img src="/assets/menu.png" alt="click" width="35px"/>
+        </button>
+        <ul class="dropdown-content" id="dropdown-content">
+            <li class="OK" id="h-li-index"><a href="/index.html">Home</a></li>
+            <li class="OK" id="h-li-projects"><a href="/pages/projects.html">Projetos</a></li>
+            <li class="OK" id="h-li-contact"><a href="/pages/contact.html">Contato</a></li>
+            <li class="OK" id="h-li-blog"><a href="/pages/blog.html">Blog</a></li>
+            <li class="OK" id="h-li-services"><a href="/pages/services.html">Serviços</a></li>
+            <li class="OK" id="h-li-about"><a href="/pages/about.html">Sobre</a></li>
+        </ul>
+    </div>
 </header>
-

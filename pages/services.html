@@ -5,16 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="../styles/reset.css">
+
+    <style>
+     #services-list {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            font-size: 1.1em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .services {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .services:last-child {
+            border-bottom: none;
+        }
+
+        .services:hover {
+             background-color: #cce;
+         }
+
+        #sendtocontact {
+            display: block;
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #sendtocontact:hover {
+            background-color: #0056b3;
+        }
+     </style>
 </head>
 <body>
     <div id="header"></div>
     
     <main>
-            <h2>Services</h2>
+        <h2>Serviços</h2>
+
+        <ul id="services-list">
+            <li class="services">Programação em C e C++ para sistemas de baixo nível e programação gráfica</li>
+            <li class="services">Desenvolvimento de sites/apps com JS/TS e React e React Native</li>
+            <li class="services">Conhecimento considerável em Linux</li>
+            <li class="services">Programação em Java junto com SQL</li>
+        </ul>
+
+        <a id="sendtocontact" thref="/pages/contact.html">Entre em Contato</a>
     </main>
     
     <div id="footer"></div>
     <script src="../src/main.js" defer></script>
 </body>
 </html>
-

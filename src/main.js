@@ -8,11 +8,8 @@ const removeAppend = async (filename, id) => {
 
 const updateColor = () => {
     const currentPage = window.location.pathname.split('/').pop().slice(0, -5);
-    console.log(currentPage);
     const currentItem = document.getElementById(`h-li-${currentPage}`);
     currentItem.style.color = "purple";
-    console.log(currentItem);
-    // if (currentItem) currentItem.remove(); // removeFromHeader
 };
 
 (async () => {
@@ -22,3 +19,16 @@ const updateColor = () => {
 
 removeAppend('/footer.html', 'footer');
 
+const toggleDropdown = () => {
+    const dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].style.display = "none";
+        }
+    }
+}
